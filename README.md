@@ -8,7 +8,7 @@ See scientific references at the end
 
 <table>
     <tr>
-        <td> <a href="http://www.lepmi-guide.univ-smb.fr"> <img src="notebook_files/images/Logo_LEPMI_h800.png" alt="Drawing" style="height: 100px;"/></a> </td>
+        <td> <a href="http://www.lepmi-guide.univ-smb.fr"> (notebook_files/images/Logo_LEPMI_h800.png?raw=true) </a> </td>
         <td>  </td>
         <td> <a href="http://www.lmgp.grenoble-inp.fr/"><img src="notebook_files/images/Logo_LMGP_300dpi.png" alt="Drawing" style="height: 100px;"/> </td>
     </tr>
