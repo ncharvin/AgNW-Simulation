@@ -8,9 +8,9 @@ See scientific references at the end
 
 <table>
     <tr>
-        <td> <a href="http://www.lepmi-guide.univ-smb.fr"> <img src="notebook_files/images/Logo_LEPMI_h800.png" alt="Drawing" height="100"/></a> </td>
+        <td> <a href="http://www.lepmi-guide.univ-smb.fr"> <img src="notebook_files/images/Logo_LEPMI_h200.png" alt="Drawing" height="100"/></a> </td>
         <td>  </td>
-        <td> <a href="http://www.lmgp.grenoble-inp.fr/"><img src="notebook_files/images/Logo_LMGP_300dpi.png" alt="Drawing" "height=100"/> </td>
+        <td> <a href="http://www.lmgp.grenoble-inp.fr/"><img src="notebook_files/images/Logo_LMGP_h200.png" alt="Drawing" "height=100"/> </td>
     </tr>
 </table>
 
