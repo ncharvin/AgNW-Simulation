@@ -1,11 +1,21 @@
 # AgNW network simulation : step-by-step
 
 ## Introduction
-This simulation is based on the works performed at both LEPMI and LMGP laboratories.
-See scientific references at the end
+This simulation is based on the works performed at both LEPMI and LMGP laboratories [1][2].
+See scientific references at the bottom of this page
+
+<table>
+    <tr>
+        <td> <a href="http://www.lepmi-guide.univ-smb.fr"> <img src="notebook_files/images/Logo_LEPMI_h100.png" alt="LEPMI" height=100></a> </td>
+        <td>  </td>
+        <td> <a href="http://www.lmgp.grenoble-inp.fr/"><img src="notebook_files/images/Logo_LMGP_h100.png" alt="LMGP" height=100> </td>
+    </tr>
+</table>
+
 
 [comment]: <> (2 images side-by-side: https://stackoverflow.com/q/24319505)
 
+<!--
 <table>
     <tr>
         <td> <a href="http://www.lepmi-guide.univ-smb.fr"> <img src="notebook_files/images/Logo_LEPMI_h800.png" alt="Drawing" style="height: 100px;"/></a> </td>
@@ -13,6 +23,9 @@ See scientific references at the end
         <td> <a href="http://www.lmgp.grenoble-inp.fr/"><img src="notebook_files/images/Logo_LMGP_300dpi.png" alt="Drawing" style="height: 100px;"/> </td>
     </tr>
 </table>
+-->
+
+_Citing:     [Dynamic degradation of metallic nanowire networks under electrical stress: a comparison between experiments and simulations](https://doi.org/10.1039/D0NA00895H), Nicolas Charvin, Joao Resende, Dorina Papanastasiou, David Munoz-Rojas, Carmen Jiménez, Ali Nourdine, Daniel Bellet, Lionel Flandin, __Nanoscale Advances__, RSC, 2021_
 
 ##### Let's explore how we perform silver nanowires network simulation
 
@@ -20,7 +33,7 @@ First, some important imports, either standard (numpy, networkX) or custom (cont
 
 
 ```python
-# permet des figures "interactives", à la Qt backend, mais c'est bien plus lent
+# this allows "interactives" figures, "à la Qt backend", but is is much slower
 # https://stackoverflow.com/a/34222212
 # %matplotlib notebook
 
@@ -87,7 +100,7 @@ print("There are {0:d} intersections within all these {1:d} nanowires.".format(n
 ```
 
     Dumping Nanowires list to custom format...
-    There are 26346 intersections within all these 4687 nanowires.
+    There are 26129 intersections within all these 4687 nanowires.
     
 
 Once all the intersections point have been computed, we will built a graph structure, representing the percolating electrical network. This structure is based on the works by [Claudia Gomes da Rocha](https://doi.org/10.1039/C5NR03905C) and [Csaba Forro](https://doi.org/10.1021/acsnano.8b05406).
@@ -130,7 +143,7 @@ NF.PlotGraph(G, fig_title="original graph")
 
 
     (<Figure size 432x288 with 1 Axes>,
-     <matplotlib.axes._subplots.AxesSubplot at 0x2c2e76c7308>)
+     <matplotlib.axes._subplots.AxesSubplot at 0x179730980c8>)
 
 
 
@@ -213,9 +226,9 @@ print("Nb edges: ", len(list(G.edges()) ) )
 ```
 
     Node GND =  {'x': -16, 'y': 50.0, 'on_electrode': 'virtual_GND'}
-    Node V+  =  {'x': 216, 'y': 50.0, 'on_electrode': 'virtual_PLUS'}
-    Nb nodes:  71468
-    Nb edges:  105721
+    Node V+  =  {'x': 166, 'y': 50.0, 'on_electrode': 'virtual_PLUS'}
+    Nb nodes:  52260
+    Nb edges:  77819
     
 
 Before performing electrical simulations, we need to check is there is a percolating path between the two virtual nodes `0` and `Last`. If so, we will remove all the nodes that are not part of the percolating cluster: 
@@ -262,8 +275,8 @@ print("Nb nodes: ", len(list(G.nodes()) ) )
 print("Nb edges: ", len(list(G.edges()) ) )
 ```
 
-    Nb nodes:  71466
-    Nb edges:  105719
+    Nb nodes:  52260
+    Nb edges:  77819
     
 
 ### KCL Matrix building
@@ -315,7 +328,7 @@ vecV = vecV * scaling_factor
 I_macro = I_SOURCE_LEVEL * scaling_factor
 ```
 
-    Rmacro = 22.4 Ohms 
+    Rmacro = 17.56 Ohms 
     
 
 Once the KCL matrix has been solved, we can update the graph structure, by adding new atributes:
@@ -348,7 +361,7 @@ NF.PlotScatterVoltages_fromGraph(G, myfontsize=15)
 NF.PlotRwiresCurrents_fromGraph(G, myfontsize=15, figtitle='')
 ```
 
-    {'LsX': 200, 'LsY': 100, 'Lw': 8, 'Rlineic': 6.0, 'Rc': 15.0, 'density': 20.0, 'Rmacro': 22.401199043538675, 'V_source_level': 1.0, 'run': 0, 'step': 0}
+    {'LsX': 150, 'LsY': 100, 'Lw': 8, 'Rlineic': 6.0, 'Rc': 15.0, 'density': 20.0, 'Rmacro': 17.556684365182047, 'V_source_level': 1.0, 'step': 0}
     
 
 
@@ -392,8 +405,8 @@ print("Dangling cleaning: ",NF.RemoveDanglingNodes(G), " dangling nodes were rem
 _ = NF.RemoveIsolatedLoops(G)
 ```
 
-    Orphan cleaning after adding default:  248  orphan nodes were removed
-    Dangling cleaning:  48  dangling nodes were removed
+    Orphan cleaning after adding default:  207  orphan nodes were removed
+    Dangling cleaning:  40  dangling nodes were removed
     
 
 Once again, we can build and solve the KCL matrix, scale to the desired voltage source level, save voltages and currents, and finally plot results
@@ -437,7 +450,7 @@ NF.PlotRwiresCurrents_fromGraph(G, myfontsize=15, figtitle='')
 #NF.SaveScatterCurrents(G)
 ```
 
-    Rmacro = 49.33 Ohms 
+    Rmacro = 42.91 Ohms 
     
 
 
