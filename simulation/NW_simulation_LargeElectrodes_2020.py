@@ -4,6 +4,7 @@ Created on Tue Dec 18 11:32:31 2018
 
 @author: Nicolas CHARVIN
 LEPMI Laboratory:  https://lepmi.grenoble-inp.fr/
+GUIDE team: http://www.lepmi-guide.univ-smb.fr
 
 
 2019.07.31:

@@ -2,7 +2,9 @@
 """
 Created on Tue Dec 18 10:41:39 2018
 
-@author: ncharvin
+@author: Nicolas CHARVIN
+LEPMI Laboratory:  https://lepmi.grenoble-inp.fr/
+GUIDE team: http://www.lepmi-guide.univ-smb.fr
 """
 
 import numpy as np

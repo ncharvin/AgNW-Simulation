@@ -4,18 +4,16 @@ Created on Wed Mar 25 10:48:20 2020
 
 
 
+@author: Nicolas CHARVIN
+LEPMI Laboratory:  https://lepmi.grenoble-inp.fr/
+GUIDE team: http://www.lepmi-guide.univ-smb.fr
+
 Test pour savoir si les 2 segments ab et xy intersectent
 
-D'après les NumericalRécipes 3rd Edition
+Based upon "Numerical Recipes 3rd Edition"
+
 section 21.4.1 Line Segment Intersections and “Left-Of” Relations
 
-
-
-    
-
-    
-
-@author: ncharvin
 """
 
 
