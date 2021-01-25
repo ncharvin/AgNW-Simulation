@@ -72,6 +72,7 @@ Voltage map:
 
 ## Adding a defect
 A defect (ie: a hole, or a slit) can be added to the network.
+
 ![Voltage map example with a vertical slit in the network](notebook_files/images/Voltage_Scatter_slit.png)
 
 ![Interpolated Voltage map example with a vertical slit in the network](notebook_files/images/Interpolated_Voltage_slit.png)
