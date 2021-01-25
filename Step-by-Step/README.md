@@ -6,9 +6,9 @@ See scientific references at the bottom of this page
 
 <table>
     <tr>
-        <td> <a href="http://www.lepmi-guide.univ-smb.fr"> <img src="notebook_files/images/Logo_LEPMI_h100.png" alt="LEPMI" height=100></a> </td>
+        <td> <a href="http://www.lepmi-guide.univ-smb.fr"> <img src="../notebook_files/images/Logo_LEPMI_h100.png" alt="LEPMI" height=100></a> </td>
         <td>  </td>
-        <td> <a href="http://www.lmgp.grenoble-inp.fr/"><img src="notebook_files/images/Logo_LMGP_h100.png" alt="LMGP" height=100> </td>
+        <td> <a href="http://www.lmgp.grenoble-inp.fr/"><img src="../notebook_files/images/Logo_LMGP_h100.png" alt="LMGP" height=100> </td>
     </tr>
 </table>
 
