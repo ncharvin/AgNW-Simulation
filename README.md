@@ -42,7 +42,7 @@ _Citing:     [Dynamic degradation of metallic nanowire networks under electrical
 
 ## Overview
 
-(More details can be found here: )
+(More details can be found in [simul_AgNW_stepBystep.html](simul_AgNW_stepBystep.html))
 
 AgNW network:
 ![AgNW network](notebook_files/images/AgNW_network.png)
