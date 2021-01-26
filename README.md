@@ -32,6 +32,8 @@ Main objectives are:
 
 _Citing:     [Dynamic degradation of metallic nanowire networks under electrical stress: a comparison between experiments and simulations](https://doi.org/10.1039/D0NA00895H), Nicolas Charvin, Joao Resende, Dorina Papanastasiou, David Munoz-Rojas, Carmen Jiménez, Ali Nourdine, Daniel Bellet, Lionel Flandin, __Nanoscale Advances__, RSC, 2021_
 
+Contact:  nicolas.charvin (a) univ-smb.fr
+
 ## Requirements
  * python v3.x
  * numpy, scipy, matplotlib, pandas
