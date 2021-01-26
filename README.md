@@ -1,7 +1,7 @@
-# AgNW network simulation
+# Nanowires network simulation
 
 ## Introduction
-This simulation is based on the works performed at both LEPMI and LMGP laboratories [1][2].
+This simulation is based on the works performed on silver nanowires (AgNW) at both LEPMI and LMGP laboratories [1][2].
 See scientific references at the bottom of this page
 
 <table>
@@ -44,18 +44,19 @@ _Citing:     [Dynamic degradation of metallic nanowire networks under electrical
 
 (More details can be found in [simul_AgNW_stepBystep.ipynb](simul_AgNW_stepBystep.ipynb))
 
-AgNW network:
+Random nanowires network:
 ![AgNW network](notebook_files/images/AgNW_network.png)
 
-Voltage map:
+Voltage map, when the network is subjected to a constant power supply across the sample:
 ![Voltage map example](notebook_files/images/Voltage_Scatter.png)
 
 ## How it works ?
 1. Generate random 2D sticks 
 
-2. Compute all intersections points
+2. Compute all intersections points, using either
     
-    1. Using either an external brute-force procedure (Windows only) or KD-tree stucture to perform efficient search
+    1. KD-tree stucture to perform efficient search
+    1. An external brute-force procedure (Windows only)
     
 3. Build a graph structure, leading to a resistors network
 
