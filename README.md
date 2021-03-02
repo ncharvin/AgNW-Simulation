@@ -62,11 +62,11 @@ Voltage map, when the network is subjected to a constant power supply across the
     
 3. Build a graph structure, leading to a resistors network
 
-    1. Intersection point gives 2 nodes on the graph.
+    1. Each intersection point gives 2 nodes on the graph.
     
     2. Each AgNW subsegment is transformed in _Rwire_ resistor, while we add a _Rcontact_ resistor between two different intersecting AgNW  (see ref [3])
     
-    3. Finalle, adding two terminal nodes, connected to a constant voltage power supply
+    3. Finally, adding two terminal nodes, connected to a constant voltage power supply
 
 4. Solve Kirchhoff Current Law  (see ref [4])
     
